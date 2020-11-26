@@ -1,3 +1,23 @@
 _schema-version: "3.2"
 ID: projeto01
 version: 0.0.1
+
+#Criando DB
+modules:
+  - name: projeto01-db
+    type: hdb
+    path: db
+    requires:
+      - name: projeto01-hdi
+
+  - name: projeto01-srv
+    type: nodejs
+    path: srv
+    requires:
+      - name: projeto01-hdi
+
+resources:
+  - name: projeto01-hdi
+    type: com.sap.xs.hdi-container
+    properties:
+      hdi-contaienr-name: ${service-name}

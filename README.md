@@ -1,3 +1,3 @@
 # Tutorial HANA 
 
-Aprendendo b√sico.
+Aprendendo basico.
